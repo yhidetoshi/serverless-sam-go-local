@@ -1,8 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  apigw
-  Sample SAM Template for apigw
+  description
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -13,8 +12,8 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: echo/
-      Handler: echo
+      CodeUri: echo # 修正
+      Handler: echo # 修正
       Runtime: go1.x
       Architectures:
         - x86_64
@@ -22,7 +21,7 @@ Resources:
         CatchAll:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /api/{proxy+}
+            Path: /api/{proxy+} # 修正
             Method: GET
       Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
         Variables:
