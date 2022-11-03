@@ -1,6 +1,6 @@
-# apigw
+# serverless
 
-This is a sample template for apigw - Below is a brief explanation of what we have generated for you:
+This is a sample template for serverless - Below is a brief explanation of what we have generated for you:
 
 ```bash
 .
